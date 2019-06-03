@@ -1,7 +1,13 @@
 import React from "react";
 
-function App() {
-  return <div>App</div>;
+class App extends React.Component {
+  render() {
+    return (
+      <div className="ui container">
+        <h1>App</h1>
+      </div>
+    );
+  }
 }
 
 export default App;
