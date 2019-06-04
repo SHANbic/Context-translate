@@ -2,14 +2,14 @@ import React from "react";
 import languageContext from "../contexts/languageContext";
 
 class Button extends React.Component {
-  renderSubmit(value) {
-    return value === "english" ? "Submit" : "Envoyer";
+  renderSubmit(language) {
+    return language === "english" ? "Submit" : "Envoyer";
   }
   render() {
     return (
       <div className="ui button primary">
         <languageContext.Consumer>
-          {value => this.renderSubmit(value)}
+          {({ language }) => this.renderSubmit(language)}
         </languageContext.Consumer>
       </div>
     );
